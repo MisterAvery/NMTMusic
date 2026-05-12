@@ -17,7 +17,7 @@
 }
 
 html {
-        scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,16 +26,47 @@ body {
     background: #ebedec;
 }
 
- img {
+img {
+    max-width: 100vw;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+#Hero {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#Hero img {
     width: 100%;
     height: auto;
+    filter: blur(15px);
+    animation: 600ms ease-out 1s 1 forwards image-fade-in;
+}
+
+@keyframes image-fade-in {
+    from {
+        filter: blur(15px);
+    }
+    
+    to {
+        filter: blur(0);
+    }
+}
+
+#Hero img:hover {
+    filter: blur(0);
 }
 
 #call-to-action {
-    background: #171719c0;
-    width: 76vw;
+    background: #17171990;
+    width: 70vw;
     max-width: 1000px;
-    padding: 4rem 0;
+    max-height: 85vh;
+    padding: 2rem 0;
     position: absolute;
     top: 5vw;
     left: 50%;
@@ -76,23 +107,39 @@ nav a:hover {
     color: dodgerblue;
 }
 
-#Experience, #Contact {
-    position: relative;
-    padding: 1.5rem 0;
+#Experience {
+    background-image: url("./media/Image-16.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 75vh;
+    min-height: 665px;
+}
+
+#carosoule {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+#carosoule button {
+    font-weight: 800;
+    font-size: 3rem;
+    text-align: center;
+    color: dodgerblue;
+    border: none;
+    background: #17171990;
 }
 
 .card {
     font-size: min(calc(76vw / 10), calc(840px/15));
-    height: 60vw;
+    height: 75vh;
     overflow-y: auto;
-    background: #171719c0;
-    width: 76vw;
+    background: #17171990;
+    width: 60vw;
     max-width: 1000px;
-    padding: 4rem 2rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 4rem;
 }
 
 .card-header {
@@ -102,7 +149,7 @@ nav a:hover {
     letter-spacing: 1ch;
     margin-bottom: 1em;
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 .card p {
