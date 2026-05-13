@@ -62,7 +62,7 @@ section {
 }
 
 #call-to-action {
-    background: #17171990;
+    background: #27272990;
     width: 70vw;
     max-width: 1000px;
     max-height: 85vh;
@@ -92,14 +92,15 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
-    gap: 1.5rem 0.3em;
-    font-size: max(0.4em, 1rem);
+    flex-direction: row;
+    gap: 1.5rem 0.9em;
+    font-size: max(0.33em, 1rem);
 }
 
 nav a {
-    color: #cfcfd1;
-    /* text-decoration: underline; */
+    letter-spacing: 0;
+    color: white;
+    text-decoration: none;
     transition: color 200ms ease;
 }
 
@@ -107,36 +108,17 @@ nav a:hover {
     color: dodgerblue;
 }
 
-#Experience {
-    background-image: url("./media/Image-16.JPG");
-    background-position: center;
+#Experience > div {
     background-repeat: no-repeat;
-    
-    height: 75vh;
-    min-height: 665px;
-}
-
-#carosoule {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly; 
-}
-
-#carosoule button {
-    font-weight: 800;
-    font-size: 3rem;
-    text-align: center;
-    color: dodgerblue;
-    border: none;
-    background: #17171990;
+    background-size: cover;
+    border-bottom: 10px solid #ffcf0090;
 }
 
 .card {
     font-size: min(calc(76vw / 10), calc(840px/15));
-    height: 75vh;
+    height: 85vh;
     overflow-y: auto;
-    background: #17171990;
+    background: #27272990;
     width: 60vw;
     max-width: 1000px;
     padding: 4rem;
@@ -146,10 +128,10 @@ nav a:hover {
     font-family: mono;
     line-height: 150%;
     color: #ffcf00;
-    letter-spacing: 1ch;
+    letter-spacing: 0.8ch;
     margin-bottom: 1em;
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 .card p {
