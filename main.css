@@ -41,7 +41,7 @@ section {
     width: 100%;
     height: auto;
     filter: blur(15px);
-    animation: 600ms ease-out 1s 1 forwards image-fade-in, scroll auto linear;
+    animation: 600ms ease-out 0.6s 1 forwards image-fade-in, scroll auto linear;
     animation-timeline: auto, scroll(root);
     position: relative;
     top: 0;
@@ -225,6 +225,7 @@ nav a:hover {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        max-height: 950px;
     }
     
     #headshot {
@@ -235,4 +236,22 @@ nav a:hover {
         width: 100%;
         font-size: 2.5rem;
     }
+}
+
+#Gallery {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: calc((100% - 2.25rem)/4) calc((100% - 2.25rem)/4) calc((100% - 2.25rem)/4) calc((100% - 2.25rem)/4);
+    grid-gap: 0.75rem;
+    place-items: center;
+}
+
+#Gallery div {
+    overflow: hidden;
+    /* height: 300px; */
+}
+
+#Gallery div img{
+    height: 100%;
+    width: 100%;
 }
