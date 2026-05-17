@@ -117,8 +117,8 @@ nav a:hover {
 }
 
 #Experience {
-    width: 90%;
-    margin: 0 auto;
+    width: 50%;
+    margin-left: 42.5%;
     max-width: 1200px;
 }
 
@@ -131,16 +131,20 @@ nav a:hover {
 .card {
     font-size: min(calc(60vw / 10), calc(840px/15));
     height: 85vh;
-    overflow: auto;
-    background: #27272990;
-    width: 60%;
+    overflow-y: auto;
+    background: #272729;
+    width: 70%;
     max-width: 1000px;
     padding: 6rem 4rem;
     text-wrap: wrap;
     text-overflow: ellipsis;
+    position: relative;
+    left: -70%;
+    transition: left 250ms ease-out;
 }
 
 .card-header {
+    overflow-wrap: break-word;
     font-family: serif, mono;
     line-height: 150%;
     color: #ffcf00;
@@ -168,7 +172,7 @@ nav a:hover {
 
 #profile {
     width: 90%;
-    background: #171719;
+    background: #272729;
     padding: 2.5rem;
     margin: 2rem auto;
     display: flex;
@@ -189,10 +193,25 @@ nav a:hover {
     padding-left: 2rem;
 }
 
-#contact-links p {
+#contact-links a {
+    display: block;
     letter-spacing: 0.5ch;
     line-height: 200%;
     font-size: 0.33em;
+    color: #cfcfd1;
+}
+
+@media (max-width: 1000px) {
+    #Experience {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card {
+        left: 0;
+        background: #27272990;
+        padding: 5rem 2rem;
+    }
 }
 
 @media (max-width: 670px) {
@@ -213,6 +232,7 @@ nav a:hover {
         flex-direction: column;
     }
     
+
     .card {
         width: 100%;
         font-size: 2.5rem;
@@ -248,7 +268,6 @@ nav a:hover {
 
 #Gallery div {
     overflow: hidden;
-    /* height: 300px; */
 }
 
 #Gallery div img{
